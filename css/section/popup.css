@@ -1,0 +1,31 @@
+.popup {
+    position: fixed;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: auto;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0 .7);
+    width: 100%;
+    height: 100%;
+}
+
+.popup__wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.popup__inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.popup__content {
+    max-width: 730px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 70px 20px;
+}

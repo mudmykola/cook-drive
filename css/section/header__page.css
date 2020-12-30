@@ -1,0 +1,130 @@
+.header__page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background: rgba(11, 20, 25, 0.9);
+    padding: 9px 0;
+    overflow: hidden;
+}
+
+.header__page-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__images {
+    width: 120px;
+    height: 75px;
+}
+
+.header__page-inner--menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    margin-right: 15px;
+}
+
+.menu__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__list-link {
+    padding: 15px 30px;
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: "Montserrat";
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.menu__list-link--text {
+    position: relative;
+}
+
+.menu__list-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #c4161c;
+    width: 100%;
+    height: calc(100% + 40px);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.menu__list-link:hover::before {
+    opacity: 1;
+}
+
+.mobile__menu {
+    display: none;
+    margin-right: -15px;
+}
+
+
+/* Media */
+
+@media (max-width: 1200px) {
+    .menu__list-link {
+        font-size: 16px;
+    }
+    .phone__item-text {
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .mobile__menu {
+        display: block;
+    }
+    .header__page {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .btn {
+        font-size: 16px;
+        line-height: 22px;
+        width: 210px;
+        height: 45px;
+        filter: drop-shadow(0 0 4px #fd4441);
+        box-shadow: 0px 0px 23px 0px rgba(212, 66, 50, 0.8);
+    }
+    .section {
+        padding: 90px 0;
+    }
+    .header__page-inner--phone {
+        display: none;
+    }
+}
+
+@media (max-width:375px) {
+    .btn {
+        font-size: 13px;
+        line-height: 16px;
+        width: 190px;
+        height: 38px;
+        filter: drop-shadow(0 0 3px #fd4441);
+        box-shadow: 0px 0px 16px 0px rgba(212, 66, 50, 0.8);
+    }
+}
+
+
+/* end Media */

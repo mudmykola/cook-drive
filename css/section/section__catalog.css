@@ -1,0 +1,99 @@
+.section__catalog-title {
+    font-size: 48px;
+    color: #C4161C;
+    font-weight: 900;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.section__catalog-title--accent {
+    color: #0b1419;
+}
+
+.catalog__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog__nav-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.catalog__nav-item:last-of-type .catalog__nav-btn {
+    border-right: 0;
+}
+
+.catalog__nav-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    min-width: 150px;
+    color: #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    transition: border .2s, background .4s, color .8s;
+    /* background-color: #C4161C; */
+}
+
+.catalog__nav-btn.is-active {
+    background-color: #1F1F1F;
+    color: #ffffff;
+    border-color: #1F1F1F;
+}
+
+.catalog__nav-btn:not(.is-active):hover {
+    background-color: #C4161C;
+    color: #ffffff;
+    border-right-color: #C4161C;
+}
+
+
+/* Media */
+
+@media (max-width: 768px) {
+    .catalog__nav {
+        max-width: 100%;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .catalog__nav-wrapper {
+        width: 100%;
+        flex-wrap: wrap;
+        border-radius: 25px;
+    }
+    .catalog__nav-item {
+        /* color: #0b1419; */
+        width: 50%;
+        flex-grow: 1;
+    }
+    .catalog__nav-btn {
+        min-width: 0;
+        width: 100%;
+        border-top: 1px solid #bfbfbf;
+    }
+    .catalog__nav-item:nth-of-type(1) .catalog__nav-btn,
+    .catalog__nav-item:nth-of-type(2) .catalog__nav-btn {
+        border-top: 0;
+    }
+    .catalog__nav-item:nth-of-type(even) .catalog__nav-btn {
+        border-right: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .section__catalog-title {
+        font-size: 36px;
+    }
+}
