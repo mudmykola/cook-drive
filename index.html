@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/section/section-contacts.css">
     <link rel="stylesheet" href="css/section/footer__page.css">
     <link rel="stylesheet" href="css/section/popup.css">
+    <link rel="stylesheet" href="css/section/popup__order.css">
     <title>Cook Drive</title>
 </head>
 <!-- Header Page -->
@@ -49,7 +50,7 @@
             </div>
             <!-- Mobile Menu -->
             <div class="mobile__menu">
-                <button class="mobile__menu-btn" type="button">
+                <button class="mobile__menu-btn " type="button" data-popup='popup__menu'>
                     <span class="mobile__menu-box">
                         <span class="mobile__menu-inner">
                         </span>
@@ -88,7 +89,7 @@
                 <nav class="catalog__nav">
                     <ul class="catalog__nav-wrapper">
                         <li class="catalog__nav-item">
-                            <button class="catalog__nav-btn is-active ">всі</button>
+                            <button class="catalog__nav-btn is-active">всі</button>
                         </li>
                         <li class="catalog__nav-item">
                             <button class="catalog__nav-btn">піца на тонкому</button>
@@ -338,7 +339,7 @@
                                     <span class="product__currency">
                                         &#8372;</span>
                                 </div>
-                                <button class="btn product__btn" type="button">замовити</button>
+                                <button class="btn product__btn" type="button" data-popup="popup-order">замовити</button>
                             </div>
                         </footer>
                     </div>
@@ -354,7 +355,7 @@
         <img class="about__image" src="images/about-bg.jpg" alt="">
         <div class="wrapper about__container">
             <div class="about__content">
-                <h2 class="section__title about__title">Про нас</h2>
+                <h2 class="about__title section__title ">Про нас</h2>
                 <p class="about__text">CookDrive–це сучасний та актуальний сервіс, який дозволить Вам отримати страви вже вподобаної українцями італійської і японської кухонь, і нової для нашого міста, неймовірно смачної тайської кухні. А головне, все це не виходячи з будинку
                     чи офісу. Ви економите свій час і отримуєте смачну їжу. Вам треба лише зателефонувати нам або зробити замовлення через сайт.</p>
             </div>
@@ -427,7 +428,7 @@
     <!-- end Footer -->
 
     <!-- popup menu -->
-    <div class="popup popup__menu">
+    <div class="popup__menu  popup">
         <div class="popup__wrapper">
             <div class="popup__inner">
                 <div class="popup__content popup__content--fluid popup__content--centered">
@@ -487,16 +488,70 @@
     <div class="popup popup__order">
         <div class="popup__wrapper">
             <div class="popup__inner">
-                <div class="popup__content popup__content--fluid popup__content--centered">
+                <div class="popup__content ">
                     <button class="btn__close popup__btn-close"></button>
-
-
-
+                    <h2 class="popup__title section__title">Оформити замовлення</h2>
+                    <p class="popup__subtitle popup__subtitle--order"> Погодьтесь, приємно отримати смачну, гарячу та запашну піцу протягом 29 хвилин, правда?</p>
+                    <div class="order">
+                        <img class="oreder__img" src="/images/section-catalog/1.png" alt="">
+                        <h3 class="order__title">
+                            <span>Чорізо</span>
+                            <span>179</span> &#8372;
+                        </h3>
+                        <p class="order__size">35 см</p>
+                        <form class="form">
+                            <input type="hidden" name="піца">
+                            <input type="hidden" name="ціна">
+                            <input type="hidden" name="розмір">
+                            <input class="form__input" type="text" name="ім'я" placeholder="ім'я" required>
+                            <input class="form__input" type="text" name="телефон" placeholder="телефон" required>
+                            <input class="form__input" type="text" name="адреса" placeholder="адреса" required>
+                            <select class="form__input" name="оплата">
+                                <option value="Оплата готівкою">Оплата готівкою</option>
+                                <option value="Оплата онлайн через сервіс LiqPa">Оплата онлайн через сервіс LiqPa</option>
+                            </select>
+                        </form>
+                        <button class="form__btn btn" type="submit">відправити</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- end popup order -->
+    <!-- popup-thanks -->
+    <div class="popup popup__thanks ">
+        <div class="popup__wrapper">
+            <div class="popup__inner">
+                <div class="popup__content ">
+                    <button class="btn__close popup__btn-close"></button>
+                    <h2 class="popup__title section__title">Успішно відправлено</h2>
+                    <p class="popup__subtitle">Ми вже розпочали готувати вашу піцу</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end popup-thanks -->
+
+
+    <!-- popup-error -->
+    <div class="popup popup__error ">
+        <div class="popup__wrapper">
+            <div class="popup__inner">
+                <div class="popup__content ">
+                    <button class="btn__close popup__btn-close"></button>
+                    <h2 class="popup__title section__title">Виникла помилка</h2>
+                    <p class="popup__subtitle">Зробіть будь ласка, замовлення за номером: <a class="popup__link" href="tel:+380633819009">063 381-90-09</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end popup-error -->
+
+
+    <script src="js/header.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 
